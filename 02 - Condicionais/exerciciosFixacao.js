@@ -10,11 +10,11 @@
     -Média acima de 6, passou de semestre;
 */
 
-function statusAluno(nota1, condicao, nota3) {
+function statusAluno(nota1, nota2, nota3) {
     var nota1;
-    var condicao;
+    var nota2;
     var nota3;
-    const IMC = (nota1 + condicao + nota3) / 3
+    const IMC = (nota1 + nota2 + nota3) / 3
 
     if (IMC < 5) {
         console.log('Reprovado');
@@ -30,30 +30,30 @@ statusAluno(6, 6, 5);
 
 /*  
     2) O IMC - Indice de Massa Corporal é um critério da Organização Munidal de Saúde para dar indicação sobre a 
-    condição de preco de uma pessoa adulta.
+    condição de peso de uma pessoa adulta.
 
     Formula do IMC:
-    IMC = preco / (condicao * condicao)
+    IMC = peso / (altura * altura)
 
     IMC em adultos(Condição):
-    - Abaixo de 18.5 Abaixo do preco;
-    - Entre 18.5 e 25 preco normal;
-    - Entre 25 e 30 Acima do preco;
+    - Abaixo de 18.5 Abaixo do peso;
+    - Entre 18.5 e 25 Peso normal;
+    - Entre 25 e 30 Acima do peso;
     - Entre 30 e 40 Obeso;
     - Acima de 40 Obesidade Grave;
 */
 
-function statusIMC(preco, condicao) {
-    var preco;
-    var condicao;
-    const imc = preco / (condicao * condicao); // outra opção seria -> const imc = preco / Math.pow(condicao,2);
+function statusIMC(peso, altura) {
+    var peso;
+    var altura;
+    const imc = peso / (altura * altura); // outra opção seria -> const imc = peso / Math.pow(altura,2);
 
     if (imc < 18.5) {
-        console.log('Abaixo do preco');
+        console.log('Abaixo do peso');
     } else if (imc >= 18.5 && imc < 25) {
-        console.log('preco normal');
+        console.log('Peso normal');
     } else if (imc >= 25 && imc < 30) {
-        console.log('Acima do preco');
+        console.log('Acima do peso');
     } else if (imc >= 30 && imc < 40) {
         console.log('Obeso');
     } else {
